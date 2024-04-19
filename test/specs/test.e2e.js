@@ -1,7 +1,5 @@
 const { expect } = require('@wdio/globals')
 const HighlightsPage = require('../pageobjects/highlights.page');
-//const MainBlock = require('../pageobjects/mainBlock');
-//const highlightsPage = require('../pageobjects/highlightsPage');
 
 describe('Chech that the page is rendered', () => {
 
@@ -50,7 +48,7 @@ describe('Chech that the page is rendered', () => {
         });
     })
 
-    // //links in the submenu checks
+    //links in the submenu checks
 
     it('The links should be clickable', async () => {
         for (let i = 1; i < 6 && i < HighlightsPage.subMenuLinks.length; i++) {
