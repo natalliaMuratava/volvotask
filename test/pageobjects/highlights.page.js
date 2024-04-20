@@ -24,12 +24,20 @@ class HighlightsPage extends Page {
         return $('site-navigation#site-navigation');
     }
 
+    get images () {
+        return $$('img')
+    }
+
+    get subMenu() {
+        return $('[data-autoid="localSubMenu:linksContainer"]')
+    }
+
     get footer () {
         return $('#vcc-site-footer')
     }
 
-    get images () {
-        return $$('img')
+    get backToTopButton () {
+        return $('[data-autoid="footer:backToTop"]')
     }
 
     subMenuLinks(index) { 
@@ -44,6 +52,7 @@ class HighlightsPage extends Page {
     scrollToPageFooter() {
         this.footer.moveTo()
     }
+
 
 
     open () {
