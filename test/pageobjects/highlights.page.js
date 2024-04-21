@@ -67,7 +67,7 @@ class highlightsPage extends Page {
    get mainBodySiteFooterCopyright () { return $('//div[@id="vcc-site-footer"]//span[@data-autoid="footer:copyright"]'); }
 
     subMenuLinks(index) { 
-        return $$(`[data-autoid="localSubMenu:linksContainer"]:nth-child(${index}) a`) 
+        return $$('[data-autoid="localSubMenu:linksContainer"]:nth-child(${index}) a') 
     }
 
     clickLink(index) {

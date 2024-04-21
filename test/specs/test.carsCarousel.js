@@ -120,32 +120,21 @@ describe('Product List Carousel checks', () => {
 		await highlightsPage.mainBodyProductListCarouselContainer.scrollIntoView();
 	});
 
-// it('Verify the product list carousel header', async () => {
-//     await expect(highlightsPage.mainBodyProductListCarouselContainerHeader).toBeDisplayed();
-//     await expect(highlightsPage.mainBodyProductListCarouselContainerHeader).toHaveText(mainBodyProductListCarouselContainerHeaderText);
-// });	
+it('Verify the product list carousel header', async () => {
+    await expect(highlightsPage.mainBodyProductListCarouselContainerHeader).toBeDisplayed();
+    await expect(highlightsPage.mainBodyProductListCarouselContainerHeader).toHaveText(mainBodyProductListCarouselContainerHeaderText);
+});	
 
-// it('Verify the product list carousel pagination buttons', async () => {
-//     await expect(highlightsPage.mainBodyProductListCarouselPreviousBtn).toBeDisplayed();
-//     await expect(highlightsPage.mainBodyProductListCarouselNextBtn).toBeDisplayed();
-// });
+it('Verify the product list carousel pagination buttons', async () => {
+    await expect(highlightsPage.mainBodyProductListCarouselPreviousBtn).toBeDisplayed();
+    await expect(highlightsPage.mainBodyProductListCarouselNextBtn).toBeDisplayed();
+});
 
 it('Verify the product list carousel items', async () => {
     for (let index = 0; index < mainBodyProductListCarouselCarModels.length; index++) {
         // await highlightsPage.open();
         // await highlightsPage.mainBodyProductListCarouselContainer.scrollIntoView();
         await highlightsPage.seekItemInProductCarousel(index);
-        
-        // await expect($(highlightsPage.mainBodyProductListCarouselItemContainer.replace('__INDEX__', index))).toBeExisting();
-        // await expect($(highlightsPage.mainBodyProductListCarouselItemContainer.replace('__INDEX__', index))).toHaveAttribute('href', mainBodyProductListCarouselCarModels[index]['ViewCarHref']);
-        // await highlightsPage.navigateToViewCarPage($(highlightsPage.mainBodyProductListCarouselItemContainer.replace('__INDEX__', index)));
-        // await expect(browser).toHaveTitle(mainBodyProductListCarouselCarModels[index]['ViewCarPageTitle']);
-        // await expect(browser).toHaveUrl(mainBodyProductListCarouselCarModels[index]['ViewCarPageUrl']);			
-        
-        // await highlightsPage.open();
-        // //await browser.back();
-        // await highlightsPage.mainBodyProductListCarouselContainer.scrollIntoView();
-        // await highlightsPage.seekItemInProductCarousel(index);
         
         await expect($(highlightsPage.mainBodyProductListCarouselItemType.replace('__INDEX__', index))).toBeDisplayed();
         await expect($(highlightsPage.mainBodyProductListCarouselItemType.replace('__INDEX__', index))).toHaveText(mainBodyProductListCarouselCarModels[index]['Type']);
@@ -163,21 +152,9 @@ it('Verify the product list carousel items', async () => {
         await expect($(highlightsPage.mainBodyProductListCarouselLearnBtn.replace('__INDEX__', index))).toHaveText(mainBodyProductListCarouselCarModelsLearnText);
         await expect($(highlightsPage.mainBodyProductListCarouselLearnBtn.replace('__INDEX__', index))).toHaveAttribute('href', mainBodyProductListCarouselCarModels[index]['ViewCarHref']);
         
-        // await highlightsPage.navigateToViewCarPage($(highlightsPage.mainBodyProductListCarouselLearnBtn.replace('__INDEX__', index)));
-        // await expect(browser).toHaveTitle(mainBodyProductListCarouselCarModels[index]['ViewCarPageTitle']);
-        // await expect(browser).toHaveUrl(mainBodyProductListCarouselCarModels[index]['ViewCarPageUrl']);			
-        
-        // await browser.back();
-        // await highlightsPage.mainBodyProductListCarouselContainer.scrollIntoView();
-        // await highlightsPage.seekItemInProductCarousel(index);
-        
         await expect($(highlightsPage.mainBodyProductListCarouselConfigureBtn.replace('__INDEX__', index))).toBeDisplayed();
         await expect($(highlightsPage.mainBodyProductListCarouselConfigureBtn.replace('__INDEX__', index))).toHaveText(mainBodyProductListCarouselCarModels[index]['CarModelsButtonText']);
         await expect($(highlightsPage.mainBodyProductListCarouselConfigureBtn.replace('__INDEX__', index))).toHaveAttribute('href', mainBodyProductListCarouselCarModels[index]['ShopCarHref']);
-        
-        // await highlightsPage.navigateToShopCarPage($(highlightsPage.mainBodyProductListCarouselConfigureBtn.replace('__INDEX__', index)));
-        // await expect(browser).toHaveTitle(mainBodyProductListCarouselCarModels[index]['ShopCarPageTitle']);
-        // await expect(browser).toHaveUrl(mainBodyProductListCarouselCarModels[index]['ShopCarPageUrl']);
    }
 });
 });

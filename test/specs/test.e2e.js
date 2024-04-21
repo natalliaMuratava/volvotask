@@ -6,7 +6,7 @@ describe('Check that the page is rendered', () => {
 
     before(async () => {
         await highlightsPage.open()
-        await highlightsPage.rejectAllCookiesButton.click();
+        await highlightsPage.cookiesContainerAcceptCookiesBtn.click();
     });
 
     // it('The logo is displayed and it has the link to the Volvo website', () => {
