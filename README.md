@@ -16,7 +16,7 @@ This framework contains configuration files, page objects, test data, test cases
    3. carsCarousel.test
    4. footer.test
 
-### Note: Not all tests are included in this framework, and the coverage will be further expanded and enhanced in the future
+**Note:** Not all tests are included in this framework, and the coverage will be further expanded and enhanced in the future
 
 ---
 
