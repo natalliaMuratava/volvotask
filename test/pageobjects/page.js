@@ -2,11 +2,11 @@ const { browser } = require('@wdio/globals')
 
 module.exports = class Page {
 
-    get rejectAllCookiesButton () {
+    get rejectAllCookiesButton() {
         return $('#onetrust-accept-btn-handler')
     }
-    
-    open (path) {
+
+    open(path) {
         return browser.url(`https://www.volvocars.com${path}`)
     }
 

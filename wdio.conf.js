@@ -21,8 +21,7 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-      './test/specs/**/*.js'
-      //'./test/specs/test.carsCarousel.js'
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -53,12 +52,37 @@ exports.config = {
     capabilities: [{
         maxInstances: 1,
         browserName: 'chrome',
+        browserVersion: '123.0.6312.86',
+        'goog:chromeOptions': {
+            args: [
+                '--no-sandbox',
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu',
+                '--window-size=1440,735',
+                '--enable-javascript',
+                '--allow-insecure-localhost',
+                "--user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0'",
+
+            ],
+        },
         acceptInsecureCerts: true
-    //  }, 
-    //   {
-    //     maxInstances: 1,
-    //     browserName: 'firefox',
-    //     acceptInsecureCerts: true
+    },
+    {
+        maxInstances: 1,
+        browserName: 'firefox',
+        'moz:firefoxOptions': {
+            args: [
+                '-headless'
+            ]
+        },
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to exclude.
+        excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        //excludeDriverLogs: ['bugreport', 'server'],
+        //
+        // Parameter to ignore some or all Puppeteer default arguments
+        // ignoreDefaultArgs: ['-foreground'], // set value to true to ignore all default arguments
 
     }],
 
@@ -118,7 +142,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
