@@ -21,7 +21,7 @@ This framework contains configuration files, page objects, test data, test cases
 ---
 
 ## Requirements
-* Docker is Insatlled
+* Docker is Installed
 * NodeJS is Installed
 
 ---
@@ -52,8 +52,4 @@ This framework contains configuration files, page objects, test data, test cases
 
 ## Test Reporting
 Reports are automatically generated using SPEC reporting.
-
----
-## GitHub Repository
-https://github.com/natalliaMuratava/volvotask
 
