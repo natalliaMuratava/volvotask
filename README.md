@@ -30,13 +30,13 @@ This framework contains configuration files, page objects, test data, test cases
    1. Make sure docker is installed and running (systemctl status docker)
    2. From the Project Directory
 ```
-   docker build -t <docker image name>:<version number> .
-   example: docker build -t volvotest:latest .  
+   docker build -t <docker image name>
+   example: docker build -t volvo -f Dockerfile .
 ```
    3. Check new image generated
 ```
-   docker images <docker image name>:<version number>
-   example: docker images volvotest:latest
+   docker images <docker image name>
+   example: docker images volvo
 ```
 
 ---
@@ -44,8 +44,8 @@ This framework contains configuration files, page objects, test data, test cases
 ## Test Case Execution
    Using docker image generated (see [Building Docker Image Using Dockerfile](#building-docker-image-using-dockerfile))
 ```
-   docker run -it <docker image name>:<version number> 
-   example: docker run -it volvotestautomation:latest 
+   docker run -it <docker image name>
+   example: docker run -it volvo
 ```   
    
 ---
