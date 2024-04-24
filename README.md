@@ -47,13 +47,13 @@ This framework contains configuration files, page objects, test data, test cases
 ## Test Case Execution
 
 1. Locally:
-Clone the project to your local machine using the git-clone command
+Clone the project to your local machine using the "git clone" command
 ```
-    example: https://github.com/natalliaMuratava/volvotask.git 
+    example: git clone  https://github.com/natalliaMuratava/volvotask.git 
 ```
 Run tests on your local machine
 ```
-npm run wdio
+    npm run wdio
 ```
 
 2. Using docker image generated (see [Building Docker Image Using Dockerfile](#building-docker-image-using-dockerfile))
