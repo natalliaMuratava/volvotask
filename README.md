@@ -30,7 +30,7 @@ This framework contains configuration files, page objects, test data, test cases
    1. Make sure docker is installed and running (systemctl status docker)
    2. From the Project Directory
 ```
-   docker build -t <docker image name>
+   docker build -t <docker image name> .
    example: docker build -t volvo -f Dockerfile .
 ```
    3. Check new image generated
