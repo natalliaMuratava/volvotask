@@ -60,6 +60,7 @@ exports.config = {
                 '--headless',
                 '--disable-gpu',
                 '--window-size=1440,735',
+                '--disable-dev-shm-usage',
                 '--enable-javascript',
                 '--allow-insecure-localhost',
                 "--user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0'",
